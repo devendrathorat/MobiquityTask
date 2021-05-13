@@ -1,0 +1,17 @@
+
+
+<div class="col-md-3" *ngFor="let weather of weathers; let i = index;" style="padding:4px;display:inline-block !important">
+    <div class="card">
+        <div class="card-header">
+            {{ weather.weather[0].main | uppercase  }}
+        </div>
+        <!-- <h5 class="card-title">{{val.cityName}}</h5> -->
+        <div class="card-body">
+            <h5> {{ weather.weather[0].description  | uppercase }}</h5>
+            <p>Wind speed (meter/sec): {{ weather.wind.speed }}</p>
+            <span>Temperature (celsius): {{ weather.main.temp }} </span> <br>
+          
+            <p>{{ weather.dt_txt | date:'medium' }}</p>
+        </div>
+    </div>
+</div>
